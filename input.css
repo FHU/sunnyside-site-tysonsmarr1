@@ -1,1 +1,60 @@
 @import "tailwindcss";
+
+
+@theme {
+    --color-brightened-400: hsl(7, 99%, 70%);
+    --color-yellow-500: hsl(51, 100%, 49%);
+    --color-green-800: hsl(167, 40%, 24%);
+    --color-skyblue-800: hsl(198, 62%, 26%);
+    --color-green-500: hsl(167, 40%, 24%);
+
+    --color-skyblue-200: #66bdf9;
+
+    
+    --color-grey-950: hsl(212, 27%, 19%);
+    --color-grey-600: hsl(213, 9%, 39%);
+    --color-grey-550: hsl(232, 10%, 55%);
+    --color-grey-400: hsl(210, 4%, 67%);
+    --color-white: hsl(0, 100%, 100%);
+
+
+    --font-body: Barlow;
+    --font-headings:Fraunces;
+}
+.fancy-underline {
+    position: relative;
+    z-index: 0;
+}
+.fancy-underline:hover::after {
+    content: "";
+    position: absolute;
+    left: -10%;
+    bottom: 0;
+    width: 120%;
+    background-color: var(--color-yellow-500);
+    height: 8px;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.triangle {
+   width: 0px;
+   height: 0px;
+   border-style: solid;
+   border-width: 0 0 40px 40px;
+   border-color: transparent transparent #fff transparent;
+   transform: rotate(0deg);
+}
+.icon-container {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    width: 100%; /* Takes up the full width of its parent */
+    height: 100px; /* Example height, adjust as needed */
+}
+
+    /* Example styles for the icon itself */
+.icon-arrow-down {
+    font-size: 24px; /* Adjust the size of the icon */
+    color: #fff; /* Example color */
+}
